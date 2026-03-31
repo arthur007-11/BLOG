@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body>
+    <header>
+        <div class="conteudo-header">
+            <a href="index.html">
+                <h1>LOGO</h1>
+            </a>
+            <nav id="nav-topo">
+                <ul>
+                    <li>
+                        <a href="#">Opção 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Opção 2</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="menu-hamburger">
+                <div class="barra-1"></div>
+                <div class="barra-2"></div>
+                <div class="barra-3"></div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="conteudo-main">
+            <h1>Blog das Codornas</h1>
+            <div class="form-container">
+                <section class="formulario">
+                    <h2>Formulário de contato</h2>
+                    <form action="" id="formulario-contato">
+                        <div class="input-box">
+                            <label for="nome-completo">Nome completo</label>
+                            <input type="text" nome="nome-completo" id="nome-completo" placeholder="Fulano de tal" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="email@email.com" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" name="telefone" id="telefone" placeholder="(00) 9 1234-5678" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="assunto">Assunto</label>
+                            <textarea name="assunto" id="assunto" required></textarea>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="menu-lateral">
+                    <input type="search" placeholder="O que busca?">
+                    <nav id="nav-lateral">
+                        <h3 id="btn-menu-lateral">Menu</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Opção 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Opção 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Opção 3</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="conteudo-footer">
+            <p>Meu blog 2025</p>
+            <p>&copy; Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="scripts/menu-responsivo.js"></script>
+    <script src="scripts/valida-formulario.js"></script>
+</body>
+
+</html>
