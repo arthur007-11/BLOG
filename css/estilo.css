@@ -1,0 +1,347 @@
+:root {
+    --tamamanho-container: 700px;
+    --background-color-padrao: #2700b4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body header {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: var(--background-color-padrao);
+}
+
+header .conteudo-header {
+    display: flex;
+    /* flex-direction: row; */ /* valor padrão */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: var(--tamamanho-container);
+}
+
+header .conteudo-header a {
+    text-decoration: none;
+    color: black;
+}
+
+header .conteudo-header nav a:hover {
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+header .conteudo-header #menu-hamburger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    cursor: pointer;
+}
+
+.conteudo-header #menu-hamburger .barra-1,
+.conteudo-header #menu-hamburger .barra-2,
+.conteudo-header #menu-hamburger .barra-3 {
+    width: 30px;
+    height: 3px;
+    margin: 3px;
+    background-color: #ffffff;
+}
+
+body header nav ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+body main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+main .conteudo-main {
+    display: flex;
+    flex-direction: column;
+    width: var(--tamamanho-container);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--background-color-padrao);
+}
+
+main .conteudo-main h1 {
+    text-align: center;
+    padding: 15px;
+}
+
+main .conteudo-main .posts-container {
+    display: flex;
+}
+
+.conteudo-main .posts-container .posts {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.posts-container .posts .post {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+
+    background-color: #ffffff;
+}
+
+.posts-container .posts .paginacao {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.posts .paginacao a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.posts-container .posts .post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.posts-container .posts .post h3 {
+    margin-bottom: 7px;
+}
+
+.conteudo-main .posts-container .menu-lateral {
+    width: 30%;
+    margin: 15px;
+}
+
+.posts-container .menu-lateral input {
+    outline: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid #8a8686;
+    padding: 7px;
+}
+
+.posts-container .menu-lateral nav {
+    margin-top: 30px;
+}
+
+.menu-lateral nav h3 {
+    text-align: center;
+    font-size: 15pt;
+    margin: 10px 0;
+}
+
+.menu-lateral nav ul li {
+    list-style-type: none;
+    font-size: 13pt;
+    margin: 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background-color: var(--background-color-padrao);
+}
+
+footer .conteudo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--tamamanho-container);
+    height: 60px;
+    gap: 15px;
+}
+
+.conteudo-footer p {
+    font-size: 14pt;
+}
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+    }
+
+    header .conteudo-header {
+        padding: 0 15px;
+    }
+
+    header .conteudo-header #menu-hamburger {
+        display: flex;
+    }
+
+    header .conteudo-header nav {
+        display: none;
+    }
+
+    #nav-topo {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 60px;
+        width: 250px;
+        background-color: #cfc2ff;
+        border-radius: 7px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        transform: translateY(-8px);
+        transition: .25s;
+
+        opacity: 0;
+        z-index: 1000;
+        max-height: 0; 
+        pointer-events: none;
+    }
+
+    #nav-topo.ativo {
+        opacity: 1;
+        max-height: 400px;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    #nav-topo ul li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+    }
+
+    #nav-topo ul li:hover {
+        background-color: #cfcfcf;
+    }
+
+    #nav-topo ul li a {
+        display: block;
+        padding: 12px 15px;
+    }
+
+    body main {
+        padding: 10px;
+    }
+
+    main .conteudo-main {
+        width: 100%;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    main .conteudo-main h1 {
+        font-size: 18pt;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    main .conteudo-main .posts-container {
+        flex-direction: column-reverse;
+    }
+
+    .conteudo-main .posts-container .menu-lateral {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: 10px;
+    }
+
+    .conteudo-main .posts-container .posts {
+        width: 100%;
+    }
+
+    #nav-lateral {
+        position: relative;
+        z-index: 999;
+    }
+
+    #nav-lateral ul {
+        position: absolute;
+        width: 200px;
+        background-color: #e3e3e3;
+        border-radius: 7px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        transform: translateY(-8px);
+        transition: .25s;
+        left: auto;
+        right: 0;
+
+        opacity: 0;
+        z-index: 1000;
+        max-height: 0; 
+        pointer-events: none;
+    }
+
+    #nav-lateral.ativo ul {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    #nav-lateral ul li {
+        list-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        margin: 0;
+        border-radius: 7px;
+    }
+
+    #nav-lateral ul li a {
+        display: block;
+        padding: 12px 15px;
+    }
+
+    #nav-lateral ul li:hover {
+        background-color: #cfcfcf;
+    }
+
+    .posts-container .menu-lateral nav {
+        margin: 0 20px;
+    }
+
+    .posts-container .menu-lateral nav h3 {
+        cursor: pointer;
+    }
+
+    .posts-container .posts .post {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .posts-container .posts .post img {
+        border-radius: 5px;
+    }
+
+    footer .conteudo-footer {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .conteudo-footer p {
+        font-size: 12pt;
+        padding: 2px;
+    }
+}
+
